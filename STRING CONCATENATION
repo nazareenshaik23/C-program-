@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    char str1[100] = "Hello ";
+    char str2[100] = "World!";
+    sprintf(str, "%s%s", str1, str2);
+    printf("%s\n", str);
+    return 0;
+}
