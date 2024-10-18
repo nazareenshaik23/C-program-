@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char password[20];
+    char reenter[20];
+    printf("enter password:"); 
+    scanf("%s",&password);
+    printf("renter the password:");
+    scanf("%s",&reenter);
+    {
+        if(strcmp(password,reenter)==0)
+        {
+            printf("matched!!");
+        }
+        else
+        {
+            printf("no match found!!");
+        }
+    }
+    return 0;
+}
