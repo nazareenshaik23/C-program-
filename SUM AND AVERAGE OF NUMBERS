@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+void main()
+{
+    int n, sum = 0, avg = 0;
+    
+    printf("How many students in the class?\n");
+    scanf("%d", &n);
+    
+    int array[n]; // dynamically set the array size based on 'n'
+    
+    // Input the marks and calculate the sum
+    for(int i = 0; i < n; i++)
+    {
+        printf("Enter the marks of student %d:\n", i + 1);
+        scanf("%d", &array[i]);
+        sum += array[i]; // accumulate the marks
+    }
+    
+    avg = sum / n; // calculate average after the loop
+    
+    // Display the sum and average
+    printf("The total marks are: %d\n", sum);
+    printf("The average of the students' marks is: %d\n", avg);
+}
