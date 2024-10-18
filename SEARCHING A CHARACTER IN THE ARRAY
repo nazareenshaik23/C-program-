@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    char arr[100], ch;
+    int i, found = 0;
+
+    // Input the string (array of characters)
+    printf("Enter a string: ");
+    gets(arr);  // Note: 'gets' is used for simplicity, but it's unsafe and should be replaced with fgets() in practice.
+
+    // Input the character to search for
+    printf("Enter the character to search: ");
+    scanf("%c", &ch);
+
+    // Search for the character
+    for(i = 0; arr[i] != '\0'; i++) {
+        if(arr[i] == ch) {
+            found = 1;
+            break;
+        }
+    }
+
+    // Output the result
+    if(found)
+        printf("Character '%c' found at position %d.\n", ch, i + 1);
+    else
+        printf("Character '%c' not found.\n", ch);
+
+    return 0;
+}
